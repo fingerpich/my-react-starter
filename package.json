@@ -1,0 +1,29 @@
+{
+  "name": "react-starter-kit-minimal",
+  "version": "1.0.0",
+  "description": "its a start for react applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register --recursive ./tests/**/*.js"
+  },
+  "keywords": [
+    "minimalistic",
+    "react",
+    "webpack",
+    "es6"
+  ],
+  "author": "fingerpich",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
