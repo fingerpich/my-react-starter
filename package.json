@@ -4,7 +4,9 @@
   "description": "its a start for react applications",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register --recursive ./tests/**/*.js"
+    "test": "mocha --compilers js:babel-register --recursive ./tests/**/*.js",
+    "dev": "webpack -d --watch",
+    "build" : "webpack -p"
   },
   "keywords": [
     "minimalistic",

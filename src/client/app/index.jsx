@@ -1,9 +1,15 @@
 import React from 'react';
 import {render} from 'react-dom';
+import FirstComponent from './firstComponent/firstComponent.jsx';
 
 class App extends React.Component {
     render () {
-        return <p> Hello React!</p>;
+        return (
+            <div>
+                <p> Hello React!</p>
+                <FirstComponent></FirstComponent>
+            </div>
+        );
     }
 }
 
