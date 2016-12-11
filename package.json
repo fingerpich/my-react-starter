@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register --recursive ./tests/**/*.js",
-    "dev": "webpack -d --watch",
-    "build" : "webpack -p"
+    "dev": "webpack-dev-server --inline --devtool source-map --content-base src/client --port 3003",
+    "build": "webpack -p"
   },
   "keywords": [
     "minimalistic",

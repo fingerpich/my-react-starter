@@ -8,6 +8,7 @@ var config = {
     entry: APP_DIR + '/index.jsx',
     output: {
         path: BUILD_DIR,
+        publicPath: '/public',//it should be relative to index.html and point to bundle.js folder 
         filename: 'bundle.js'
     },
     module : {
