@@ -7,7 +7,7 @@ Simple and optimized React boilerplate.
  
  1. `git clone https://github.com/fingerpich/my-react-starter.git`
  2. Run `npm install`
- 3. Start the dev server using `npm run dev`
+ 3. Start the dev server using `npm start`
  3. Open [http://localhost:3003](http://localhost:3003)
  
  

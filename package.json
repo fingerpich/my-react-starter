@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register --recursive ./tests/**/*.js",
-    "dev": "webpack-dev-server --inline --devtool source-map --content-base src/client --port 3003",
+    "start": "webpack-dev-server --inline --devtool source-map --content-base src/client --port 3003",
     "build": "webpack -p"
   },
   "keywords": [
@@ -18,7 +18,9 @@
   "license": "MIT",
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
