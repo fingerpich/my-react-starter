@@ -1,11 +1,26 @@
-import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
+import CounterElement from './counterElement.jsx';
 
-const Counter = ({value, onIncrement, onDecrement}) => (
-    <div>
-        <h4>{value}</h4>
-        <button onClick={onIncrement}>+</button>
-        <button onClick={onDecrement}>-</button>
-    </div>
-);
+const mapStateToProps = (state, ownProps) => {
+    return {
+        value: parseInt(state.counterReducer)
+    }
+};
 
-export default Counter
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        onIncrement: () => {
+            dispatch({type:'INCREMENT'});
+        },
+        onDecrement: () => {
+            dispatch({type:'DECREMENT'});
+        }
+    }
+};
+
+const Counter = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(CounterElement);
+
+export default Counter;

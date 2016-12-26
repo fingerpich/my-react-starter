@@ -5,6 +5,6 @@ export default (state = 1, action) => {
         case 'DECREMENT':
             return state - 1;
         default:
-            return state+1-1;
+            return state;
     }
 }
