@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import CounterElement from './counterElement.jsx';
+import {asyncIncrease,getRemoteValue} from './AsyncCounterMiddleware.jsx';
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -10,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onIncrement: () => {
-            dispatch({type:'INCREMENT'});
+            dispatch(asyncIncrease());
         },
         onDecrement: () => {
             dispatch({type:'DECREMENT'});
