@@ -11,6 +11,8 @@ import thunk from 'redux-thunk';
 import createLogger from "redux-logger";
 
 import firebase from 'firebase';
+import {fetchProduct} from './products/productsActionCreator.jsx';
+
 //CONFIG FIREBASE
 var config = {
     apiKey: "AIzaSyDBjBWIQ8aBBLvu_noO92y7T9NPx9BFwbc",
@@ -39,4 +41,5 @@ const render=() => {
         document.getElementById('app')
     );
 };
+store.dispatch(fetchProduct());
 render();

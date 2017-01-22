@@ -1,42 +1,26 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { addProduct } from './../productsActionCreator.jsx';
+import NewProductElement from './newProductElement.jsx';
 
-let NewProductElement = ({ dispatch }) => {
-    let nameInput;
-    let priceInput;
-    let nextTodoId=0;
-
-    return (
-        <div>
-            <form onSubmit={e => {
-                e.preventDefault();
-                if (!nameInput.value.trim()) {
-                    return
-                }
-
-                dispatch({
-                    type: 'ADD_PRODUCT',
-                    name:nameInput.value,
-                    price:priceInput.value,
-                    id: nextTodoId++
-                });
-                nameInput.value = '';
-                priceInput.value = '';
-            }}>
-                <input ref={node => {
-                    nameInput = node
-                }} />
-                <input ref={node => {
-                    priceInput = node
-                }} />
-                <button type="submit">
-                    Add product
-                </button>
-            </form>
-        </div>
-    )
+const mapStateToProps = (state, ownProps) => {
+    return {
+        // list: state.ProductsReducer
+    }
 };
 
-const NewProduct = connect()(NewProductElement);
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        onAddProduct: (product) => {
+            dispatch(addProduct(product));
+        }
+    }
+};
+
+const NewProduct = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(NewProductElement);
+
 
 export default NewProduct

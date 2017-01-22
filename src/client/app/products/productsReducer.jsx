@@ -4,10 +4,14 @@ export default (productsState = [], action) => {
         case 'REMOVE_PRODUCT':return removeProduct(productsState,action);
         case 'EDIT_PRODUCT':return editProduct(productsState,action);
         case 'CLICK_PRODUCT':return clickProduct(productsState,action);
+        case 'FETCH_PRODUCTS':return fetchProducts(productsState,action);
         default: return productsState;
     }
 }
 
+function fetchProducts(productsState, action){
+    return [...action.products];
+}
 
 function addProduct(productsState, action){
     const newProducts = productsState.concat({
