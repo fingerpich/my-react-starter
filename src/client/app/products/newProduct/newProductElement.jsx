@@ -2,6 +2,12 @@ import React, {PropTypes} from 'react';
 
 let nameInput;
 let priceInput;
+
+/**
+ * present list of products
+ * @param {function} onAddProduct event callback
+ * @return {object} presentation element
+ */
 const NewProductElement = ({ onAddProduct}) => (
     <div>
         <form onSubmit={e => {

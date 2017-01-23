@@ -2,6 +2,13 @@ import React, {PropTypes} from 'react';
 import Product from './product/product.jsx';
 import NewProduct from './newProduct/newProduct.jsx';
 
+/**
+ * present list of products
+ * @param {array} list contain products
+ * @param {function} onProductClick event callback
+ * @param {function} onRemoveClick event callback
+ * @return {object} presentation element
+ */
 const ProductListElement = ({ list, onProductClick, onRemoveClick }) => (
     <div>
         <NewProduct/>

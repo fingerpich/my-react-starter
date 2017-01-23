@@ -3,14 +3,13 @@ import { Provider } from 'react-redux'
 import reactDom from 'react-dom';
 import { createStore, applyMiddleware } from 'redux'
 
-import Counter from './counter/counter.jsx';
 import Products from './products/products.jsx';
-import appReducers from './combineReducers.jsx';
+import appReducers from './combineReducers.jsx';//so you don't need to fetch them every where you need
 
-import thunk from 'redux-thunk';
-import createLogger from "redux-logger";
+import thunk from 'redux-thunk';//manage async reducer
+import createLogger from "redux-logger";//show logs on every reducer
 
-import firebase from 'firebase';
+import firebase from 'firebase';//to use its database
 import {fetchProduct} from './products/productsActionCreator.jsx';
 
 //CONFIG FIREBASE
@@ -31,6 +30,10 @@ let store = createStore(
     applyMiddleware(thunk, logger)
 );
 
+/**
+ * render the root element and pass store to provide component so we can use connect in another modules to access store
+ * @return {object} react element
+ */
 const render=() => {
     reactDom.render(
         <div>
@@ -41,5 +44,7 @@ const render=() => {
         document.getElementById('app')
     );
 };
-store.dispatch(fetchProduct());
+
+store.dispatch(fetchProduct());//pass dispatch via thunk to use FETCH_DATA reducer
+
 render();

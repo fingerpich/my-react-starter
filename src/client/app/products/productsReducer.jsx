@@ -9,10 +9,24 @@ export default (productsState = [], action) => {
     }
 }
 
+
+/**
+ * present list of products
+ * @param {object} productsState current state
+ * @param {object} action contain type and data
+ * @return {object} new state for products
+ */
 function fetchProducts(productsState, action){
     return [...action.products];
 }
 
+
+/**
+ * present list of products
+ * @param {object} productsState current state
+ * @param {object} action contain type and data
+ * @return {object} new state for products
+ */
 function addProduct(productsState, action){
     const newProducts = productsState.concat({
         id: action.id,
@@ -23,6 +37,13 @@ function addProduct(productsState, action){
     return newProducts;
 }
 
+
+/**
+ * present list of products
+ * @param {object} productsState current state
+ * @param {object} action contain type and data
+ * @return {object} new state for products
+ */
 function editProduct(productsState, action){
     const newProducts=[...productsState];//clone products
     newProducts[productsState.findIndex(p => p.id==action.id)]={
@@ -34,6 +55,13 @@ function editProduct(productsState, action){
     return newProducts;
 }
 
+
+/**
+ * present list of products
+ * @param {object} productsState current state
+ * @param {object} action contain type and data
+ * @return {object} new state for products
+ */
 function removeProduct(productsState, action){
     const newProducts=productsState.slice();//clone products
     newProducts.splice(productsState.findIndex(p => p.id==action.id), 1);//remove matched product
@@ -41,6 +69,13 @@ function removeProduct(productsState, action){
     return newProducts;
 }
 
+
+/**
+ * present list of products
+ * @param {object} productsState current state
+ * @param {object} action contain type and data
+ * @return {object} new state for products
+ */
 function clickProduct(productsState, action){
     alert(action.product.id);
     return productsState;
