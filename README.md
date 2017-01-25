@@ -1,7 +1,8 @@
 # ES6 React boilerplate using Webpack
-Simple and optimized React boilerplate.
+
+ Its a boilerplate for React, Redux, Thunk, Firebase applications. it also uses ES6, Esdoc, babel, Webpack to generate es5 javascript code.
  
- ## Starting the dev server
+# Starting the dev server
  
  Make sure you have Node.js installed.
  
@@ -11,3 +12,11 @@ Simple and optimized React boilerplate.
  3. Open [http://localhost:3003](http://localhost:3003)
  
  
+# Generate document
+
+ install and use esdoc
+ 
+ 1. `npm install -g esdoc`
+ 2. Run `esdoc`
+ 
+ open ./doc/index.html in browser

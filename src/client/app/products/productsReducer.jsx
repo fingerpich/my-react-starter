@@ -11,7 +11,6 @@ export default (productsState = [], action) => {
 
 
 /**
- * present list of products
  * @param {object} productsState current state
  * @param {object} action contain type and data
  * @return {object} new state for products
@@ -22,7 +21,6 @@ function fetchProducts(productsState, action){
 
 
 /**
- * present list of products
  * @param {object} productsState current state
  * @param {object} action contain type and data
  * @return {object} new state for products
@@ -39,7 +37,6 @@ function addProduct(productsState, action){
 
 
 /**
- * present list of products
  * @param {object} productsState current state
  * @param {object} action contain type and data
  * @return {object} new state for products
@@ -57,7 +54,6 @@ function editProduct(productsState, action){
 
 
 /**
- * present list of products
  * @param {object} productsState current state
  * @param {object} action contain type and data
  * @return {object} new state for products
@@ -71,7 +67,6 @@ function removeProduct(productsState, action){
 
 
 /**
- * present list of products
  * @param {object} productsState current state
  * @param {object} action contain type and data
  * @return {object} new state for products
